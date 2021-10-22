@@ -215,8 +215,10 @@ let month = d / 31;
 
 console.log(`Количество дней - ${d}`)
 
-if ((month - Math.floor(month)) == 0) {
+if (month - Math.floor(month) == 0) {
        console.log(`${month}-й месяц`);
+} else if ((month > 12) || (month <= 0)) {
+       console.log(`Введено неверное число`);
 } else {
        console.log(`${Math.floor(month + 1)}-й месяц`);
 }
@@ -293,4 +295,6 @@ switch (true) {
        case (month > 8 && month <= 11):
               console.log('Осень');
        break;
+
+       default: console.log(`Точно, неверное`);
 }
